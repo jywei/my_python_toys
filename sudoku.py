@@ -57,24 +57,24 @@ incorrect5 = [ [1, 1.5],
 
 def check_sudoku(p):
     n = len(p)
-    digit = 1
-    while digit <= n:
+    digit = 1  #start with 1
+    while digit <= n:  #go through each digit
         i = 0
-        while i < n:
+        while i < n:  #go through each row and column
             row_count = 0
             col_count = 0
             j = 0
-            while j < n:
-                if p[i][j] == digit:
+            while j < n:  #for each entry in ith row/column
+                if p[i][j] == digit:  #check row count
                     row_count = row_count + 1
                 if p[j][i] == digit:
                     col_count = col_count + 1
                 j += 1
             if row_count != 1 or col_count != 1:
                 return False
-            i += 1
-        digit += 1
-    return True
+            i += 1  #next row count
+        digit += 1  #next digit
+    return True  #nothing wrong
 
 
 print check_sudoku(incorrect)
