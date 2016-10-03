@@ -16,10 +16,10 @@
 
 def freq_analysis(message):
     abc = 'abcdefghijklmnopqrstuvwxyz'
-    freq_list = [0.0] *26
+    freq_list = [0.0] * 26
     le = len(message)
     for i in message:
-        freq_list[abc.find(i)] +=  1.0 / le
+        freq_list[abc.find(i)] += 1.0 / le
     return freq_list
 
 #Tests
