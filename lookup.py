@@ -17,6 +17,7 @@ def lookup(index, keyword):
   for ele in index:
     if ele[0] == keyword:
       return ele[1]
+  return []
 
 
 print lookup(index, 'udacity')
