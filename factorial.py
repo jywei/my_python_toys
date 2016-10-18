@@ -1,11 +1,17 @@
 # Define a procedure, factorial, that takes a natural number as its input, and
 # returns the number of ways to arrange the input number of items.
 
+# def factorial(n):
+#     base = 1
+#     for m in range(1, n + 1):
+#         base *= m
+#     return base
+
 def factorial(n):
-    base = 1
-    for m in range(1, n + 1):
-        base *= m
-    return base
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n - 1)
 
 print(factorial(0))
 #>>> 1
