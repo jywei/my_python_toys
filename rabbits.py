@@ -28,6 +28,9 @@
 #                                long to run on inputs above 30.)
 
 def rabbits(n):
+  if n < 1:
+    return 0
+  else:
     if n <= 2:
         return 1
     elif n > 2 and n <= 5:
