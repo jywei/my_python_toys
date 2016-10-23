@@ -18,15 +18,23 @@ def is_list(p):
 # It is not necessary to understand how is_list works. It returns True if the
 # input is a List, and returns False otherwise.
 
+# def deep_count(p):
+#     length = 0
+#     for ele in p:
+#         if is_list(ele):
+#             val = len(ele)
+#             if val != 0:
+#                 length += deep_count(ele)
+#         length += 1
+#     return length
+
 def deep_count(p):
-    length = 0
+    sum = 0
     for ele in p:
+        sum += 1
         if is_list(ele):
-            val = len(ele)
-            if val != 0:
-                length += deep_count(ele)
-        length += 1
-    return length
+            sum += deep_count(ele)
+    return sum
 
 print(deep_count([1, 2, 3]))
 #>>> 3
