@@ -47,12 +47,21 @@
 # items will be split. The second procedure, bell, takes as input a
 # positive integer n and returns the Bell number B(n).
 
-def stirling():
+def stirling(n,k):
+    if n == k or k == 1:
+        return 1
+    if k == 0 or k > n:
+        return 0
+    return k * stirling(n - 1, k) + stirling(n - 1, k - 1)
 
 
-def bell():
-
-
+def bell(n):
+    i = n
+    s = 0
+    for i in range(1, n + 1):
+        s += stirling(n, i)
+        i -= 1
+    return s
 
 print(stirling(1,1))
 #>>> 1
