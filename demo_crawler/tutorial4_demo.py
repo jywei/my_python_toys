@@ -55,7 +55,7 @@ def parse(dom):
     links = soup.find(id = 'main-content').find_all('a')
     img_urls = []
     for link in links:
-        if re.match(r'^https?://(i.)?(m.)?imgur.com', link['href']):
+        if re.match(r'^https?://(i.)?(m.)?imgur.com', link['href']): # regular expression
             img_urls.append(link['href'])
     return img_urls
 
